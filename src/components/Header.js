@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div
-      className="w-full lg:flex lg:h-20 sticky top-0 h-16 justify-center items-center"
+      className="w-full lg:flex lg:h-20 sticky top-0 h-16 justify-center items-center z-20"
       style={{ background: "#171B26" }}
     >
       <div
@@ -27,7 +27,10 @@ const Header = () => {
         <Link to="/" className="w-1/12">
           <Logo />
         </Link>
-        <div className="" onClick={() => setOpenNav(!openNav)}>
+        <div
+          className="text-4xl absolute right-6 top-6 cursor-pointer lg:hidden"
+          onClick={() => setOpenNav(!openNav)}
+        >
           <ion-icon
             size="large"
             name={!openNav ? "grid-outline" : "close-outline"}
