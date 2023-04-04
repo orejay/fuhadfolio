@@ -12,7 +12,7 @@ const socials = [
 const Socials = () => {
   return (
     <div
-      className="rounded-lg mx-auto w-11/12 lg:w-10/12 flex px-3 flex-wrap lg:flex-nowrap lg:text-xl lg:justify-around py-5 my-8 lg:my-16"
+      className="rounded-lg mx-auto w-11/12 lg:w-10/12 flex px-3 flex-wrap lg:flex-nowrap lg:text-xl lg:justify-around py-5 lg:py-10 my-8 lg:my-16"
       style={{ background: "#1F2433" }}
     >
       {socials.map((each, index) => (

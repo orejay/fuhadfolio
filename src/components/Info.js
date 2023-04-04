@@ -24,7 +24,7 @@ const Info = () => {
           FIFA, or playing other video games.
         </p>
       </div>
-      <div className="lg:w-1/2 flex justify-center items-center mb-8">
+      <div className="lg:w-1/2 flex justify-center items-center mt-10 mb-8">
         <img src={ope} alt="ope" className="lg:w-10/12" />
       </div>
     </div>
