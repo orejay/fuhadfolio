@@ -21,7 +21,7 @@ const Header = () => {
       style={{ background: "#171B26" }}
     >
       <div
-        className="w-11/12 lg:w-10/12 mx-auto py-5  bg-green-400 px-3 flex items-center justify-between"
+        className="w-11/12 lg:w-10/12 mx-auto py-5 px-3 flex items-center justify-between"
         style={{ color: "#BFC6D9" }}
       >
         <Link to="/" className="w-1/12">
