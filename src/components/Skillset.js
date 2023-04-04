@@ -13,13 +13,14 @@ const skillset = [
 
 const Skillset = () => {
   return (
-    <div className="w-10/12 mx-auto mb-5">
+    <div className="w-11/12 lg:w-10/12 mx-auto mb-5">
       <h1 className="millik text-3xl mb-5">Skillset</h1>
-      <div className="flex justify-between">
+      <div className="lg:flex justify-between">
         {skillset.map((each, index) => (
           <div
             style={{ background: "#1F2433", width: "48%" }}
-            className="rounded-md p-4"
+            className="rounded-md p-4 skill mb-5 lg:mb-0"
+            key={index}
           >
             <h2 className="millik text-xl mb-2">{each.title}</h2>
             <p>{each.desc}</p>

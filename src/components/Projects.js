@@ -49,7 +49,7 @@ const Projects = () => {
               alt={`project-${index}`}
               className="mb-4 rounded-tl-2xl rounded-br-2xl"
             />
-            <h1 className="millik text-xl lg:text-2xl lg:w-7/12">
+            <h1 className="millik text-xl lg:text-2xl mb-2 lg:mb-0 lg:w-7/12">
               {each.title}
             </h1>
             <p className="lg:w-10/12 text-sm lg:text-base mb-4" style={style}>

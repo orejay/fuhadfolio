@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const Info = () => {
   return (
-    <div className="w-10/12 h-screen mx-auto flex">
-      <div className="w-1/2 flex flex-col justify-center">
-        <h1 className="millik text-5xl mb-5">Hi, I am Fuhad</h1>
-        <p className="mb-5 text-base w-11/12">
+    <div className="w-11/12 lg:w-10/12 h-screen mx-auto mb-10 lg:mb-0 lg:flex lg:flex-row flex flex-col-reverse">
+      <div className="lg:w-1/2 flex flex-col justify-center">
+        <h1 className="millik text-2xl lg:text-5xl mb-5">Hi, I am Fuhad</h1>
+        <p className="mb-5 text-sm lg:text-base lg:w-11/12">
           I am a Product & Graphic designer based in Nigeria. I enjoy creating
           experiences that are built for everyone to use and enjoy without any
           stress. <br />
@@ -24,8 +24,8 @@ const Info = () => {
           FIFA, or playing other video games.
         </p>
       </div>
-      <div className="w-1/2 flex justify-center items-center mb-28">
-        <img src={ope} alt="ope" className="w-2/3" />
+      <div className="lg:w-1/2 flex justify-center items-center mb-8">
+        <img src={ope} alt="ope" className="lg:w-10/12" />
       </div>
     </div>
   );

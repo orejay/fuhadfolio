@@ -8,7 +8,7 @@ const ContactMe = () => {
       style={{ background: "#1F2433" }}
       id="contact"
     >
-      <div className="lg:w-3/12 text-center">
+      <div className="lg:w-3/12 w-10/12 text-center">
         <h1 className="millik mb-3">
           Ready for us to make magic together? Lets talk!
         </h1>
