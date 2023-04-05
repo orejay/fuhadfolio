@@ -21,6 +21,7 @@ const Socials = () => {
         <a
           key={index}
           href={each.link}
+          target="_blank"
           className="millik flex items-center md:px-8 px-5 mx-auto h-full underline text-tex hover:text-link"
           onMouseEnter={() => {
             setHov(!hov);
