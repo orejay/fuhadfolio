@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Info = () => {
   return (
-    <div className="w-11/12 lg:w-10/12 h-screen mx-auto mb-10 lg:mb-0 flex flex-col-reverse lg:flex lg:flex-row">
-      <div className="lg:w-1/2 flex flex-col justify-center">
+    <div className="w-11/12 lg:w-10/12 min-h-screen mt-10 mx-auto mb-10 lg:mb-0 flex flex-col-reverse lg:flex lg:flex-row">
+      <div className="lg:w-1/2 flex flex-col lg:justify-center">
         <h1 className="millik text-2xl lg:text-5xl mb-5">Hi, I am Fuhad</h1>
         <p className="mb-5 text-sm lg:text-base lg:w-11/12">
           I am a Product & Graphic designer based in Nigeria. I enjoy creating
@@ -24,8 +24,11 @@ const Info = () => {
           FIFA, or playing other video games.
         </p>
       </div>
-      <div className="lg:w-1/2 flex justify-center items-center mt-10 mb-8">
+      {/* <div className="lg:w-1/2 flex justify-center items-center mt-10 mb-8">
         <img src={ope} alt="ope" className="lg:w-10/12" />
+      </div> */}
+      <div className="lg:w-1/2 flex justify-center lg:items-center mb-8">
+        <img src={ope} alt="ope" className="lg:w-8/12" />
       </div>
     </div>
   );

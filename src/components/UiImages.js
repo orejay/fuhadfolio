@@ -15,7 +15,12 @@ const UiImages = () => {
     <div className="w-10/12 mx-auto py-20">
       <div className="flex flex-wrap justify-between">
         {images.map((each, index) => (
-          <img src={each} alt={`image-${index}`} className="mb-10" />
+          <img
+            src={each}
+            alt={`image-${index}`}
+            key={index}
+            className="mb-10"
+          />
         ))}
       </div>
     </div>

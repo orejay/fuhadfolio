@@ -44,12 +44,12 @@ const Header = () => {
         >
           {nav.map((each, index) =>
             ["About Me", "UIs"].includes(each.name) ? (
-              <li className="md:my-0 my-5">
+              <li key={index} className="md:my-0 my-5">
                 <Link
                   to={each.link}
-                  key={index}
                   onClick={() => {
                     setActive(true);
+                    setOpenNav(false);
                     scroll.scrollToTop();
                   }}
                   className={`${
@@ -60,17 +60,17 @@ const Header = () => {
                 </Link>
               </li>
             ) : (
-              <li className="md:my-0 my-5">
+              <li key={index} className="md:my-0 my-5">
                 <a
                   onClick={() => {
                     scroller.scrollTo(each.link, { smooth: true, offset: -64 });
                     setTabNo(index + 1);
+                    setOpenNav(false);
                     setActive(false);
                   }}
                   className={`cursor-pointer ${
                     !active && tabNo === index + 1 ? "text-pressed" : ""
                   }`}
-                  key={index}
                 >
                   {each.name}
                 </a>
