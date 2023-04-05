@@ -37,7 +37,9 @@ const Header = () => {
         </div>
         <ul
           className={`md:flex md:w-9/12 items-center justify-between absolute md:static bg-backgrnd md:z-auto z-[-1] left-0 w-full text-xl h-screen md:h-auto pb-7 md:pb-0 pl-7 md:pl-0 transition-all ease-in-out duration-500 ${
-            openNav ? "top-16" : "top-[-1490px]"
+            openNav
+              ? "top-16 opacity-100"
+              : "top-[-1490px] md:opacity-100 opacity-0"
           }`}
         >
           {nav.map((each, index) =>

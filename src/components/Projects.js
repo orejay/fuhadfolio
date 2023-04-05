@@ -74,7 +74,7 @@ const Projects = () => {
               {each.desc}
             </p>
             <Link
-              className="flex w-3/12 py-2 justify-center transition-all duration-500 ease-in-out items-center text-sm lg:text-base mb-10 lg:mb-0 rounded-md bg-tex hover:bg-link text-drk"
+              className="flex md:w-3/12 w-4/12 py-2 justify-center transition-all duration-500 ease-in-out items-center text-sm lg:text-base mb-10 lg:mb-0 rounded-md bg-tex hover:bg-link text-drk"
               onMouseEnter={() => {
                 setReadHov(true);
               }}

@@ -14,7 +14,7 @@ const Socials = () => {
 
   return (
     <div
-      className="rounded-lg mx-auto w-11/12 lg:w-10/12 flex px-3 flex-wrap lg:flex-nowrap lg:text-xl lg:justify-around h-24 my-8 lg:my-16"
+      className="rounded-lg mx-auto w-11/12 lg:w-10/12 flex px-3 flex-wrap lg:flex-nowrap lg:text-xl lg:justify-around md:h-24 py-7 md:py-0 my-8 lg:my-16"
       style={{ backgroundColor: "#1F2433" }}
     >
       {socials.map((each, index) => (
