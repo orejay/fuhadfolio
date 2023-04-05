@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Info = () => {
   return (
-    <div className="w-11/12 lg:w-10/12 min-h-screen mt-32 mx-auto mb-10 lg:mb-0 flex flex-col-reverse lg:flex lg:flex-row">
+    <div className="w-11/12 lg:w-10/12 md:min-h-screen mt-32 md:mt-0 mx-auto mb-10 lg:mb-0 flex flex-col-reverse lg:flex lg:flex-row">
       <div className="lg:w-1/2 flex flex-col lg:justify-center">
         <h1 className="millik text-2xl lg:text-5xl mb-5">Hi, I am Fuhad</h1>
         <p className="mb-5 text-sm lg:text-base lg:w-11/12">
