@@ -63,13 +63,27 @@ const Header = () => {
               <li key={index} className="md:my-0 my-5">
                 <a
                   onClick={() => {
-                    scroller.scrollTo(each.link, { smooth: true, offset: -64 });
+                    scroller.scrollTo(each.link, {
+                      smooth: true,
+                      offset: -100,
+                    });
                     setTabNo(index + 1);
                     setOpenNav(false);
-                    setActive(false);
+                    each.link === "projects" && ["uis", "about"].includes(route)
+                      ? setActive(active)
+                      : setActive(false);
                   }}
                   className={`cursor-pointer ${
-                    !active && tabNo === index + 1 ? "text-pressed" : ""
+                    !active &&
+                    tabNo === index + 1 &&
+                    !["uis", "about"].includes(route) &&
+                    each.link === "projects"
+                      ? "text-pressed"
+                      : !active &&
+                        tabNo === index + 1 &&
+                        each.link === "contact"
+                      ? "text-pressed"
+                      : ""
                   }`}
                 >
                   {each.name}
