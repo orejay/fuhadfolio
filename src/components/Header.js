@@ -14,6 +14,11 @@ const nav = [
 const Header = () => {
   const [tabNo, setTabNo] = useState(0);
   const [openNav, setOpenNav] = useState(false);
+  const [active, setActive] = useState(true);
+  var route = window.location.href.split("/")[3];
+  const clearActive = () => {
+    setActive(true);
+  };
 
   return (
     <div
@@ -25,7 +30,7 @@ const Header = () => {
         style={{ color: "#BFC6D9" }}
       >
         <Link to="/" className="w-1/12">
-          <Logo />
+          <Logo clearActive={(props) => clearActive(props)} />
         </Link>
         <div
           className="text-4xl absolute right-6 top-6 cursor-pointer lg:hidden"
@@ -47,8 +52,13 @@ const Header = () => {
                 <Link
                   to={each.link}
                   key={index}
-                  onClick={() => setTabNo(index + 1)}
-                  className={`${tabNo === index + 1 ? "underline" : ""}`}
+                  onClick={() => {
+                    setActive(true);
+                    scroll.scrollToTop();
+                  }}
+                  className={`${
+                    active && route === each.link.slice(1) ? "text-pressed" : ""
+                  }`}
                 >
                   {each.name}
                 </Link>
@@ -57,9 +67,10 @@ const Header = () => {
                   onClick={() => {
                     scroller.scrollTo(each.link, { smooth: true });
                     setTabNo(index + 1);
+                    setActive(false);
                   }}
                   className={`cursor-pointer ${
-                    tabNo === index + 1 ? "underline" : ""
+                    !active && tabNo === index + 1 ? "text-pressed" : ""
                   }`}
                   key={index}
                 >

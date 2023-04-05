@@ -1,6 +1,6 @@
 import React from "react";
 
-const LinkArrow = () => {
+const LinkArrow = ({ colorr }) => {
   return (
     <svg
       width="10"
@@ -12,14 +12,14 @@ const LinkArrow = () => {
     >
       <path
         d="M1.83334 10.1667L10.1667 1.83334"
-        stroke="#BFC6D9"
+        stroke={colorr}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M1.83334 1.83334H10.1667V10.1667"
-        stroke="#BFC6D9"
+        stroke={colorr}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"

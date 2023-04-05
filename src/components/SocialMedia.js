@@ -12,7 +12,7 @@ const SocialMedia = ({ style }) => {
       <a href="https://twitter.com/kingfuhad1" target="_blank">
         <Twitter />
       </a>
-      <a href="" target="_blank">
+      <a href="https://www.instagram.com/f.a__designs/" target="_blank">
         <Instagram />
       </a>
     </div>

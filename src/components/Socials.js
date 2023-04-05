@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import LinkArrow from "./LinkArrow";
 
 const socials = [
@@ -10,19 +9,36 @@ const socials = [
 ];
 
 const Socials = () => {
+  const [hov, setHov] = useState(false);
+  const [tab, setTab] = useState(0);
+
   return (
     <div
-      className="rounded-lg mx-auto w-11/12 lg:w-10/12 flex px-3 flex-wrap lg:flex-nowrap lg:text-xl lg:justify-around py-5 lg:py-10 my-8 lg:my-16"
-      style={{ background: "#1F2433" }}
+      className="rounded-lg mx-auto w-11/12 lg:w-10/12 flex px-3 flex-wrap lg:flex-nowrap lg:text-xl lg:justify-around h-24 my-8 lg:my-16"
+      style={{ backgroundColor: "#1F2433" }}
     >
       {socials.map((each, index) => (
         <a
           key={index}
           href={each.link}
-          className="millik flex items-center mx-auto underline"
-          style={{ color: "#BFC6D9" }}
+          className="millik flex items-center px-8 mx-auto h-full underline text-tex hover:text-link"
+          onMouseEnter={() => {
+            setHov(!hov);
+            setTab(index + 1);
+          }}
+          onMouseLeave={() => {
+            setHov(!hov);
+            setTab(0);
+          }}
         >
-          {each.name} <LinkArrow />
+          {each.name}{" "}
+          <span
+            className={`transition-all duration-500 ${
+              hov && tab === index + 1 ? "translate-y-[-5px]" : ""
+            }`}
+          >
+            <LinkArrow colorr={hov ? "#D9B14E" : "#BFC6D9"} />
+          </span>
         </a>
       ))}
     </div>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import ope from "../assets/ope.png";
 import LinkArrow from "./LinkArrow";
 import { Link } from "react-router-dom";
 
 const Intro = () => {
+  const [hov, setHov] = useState(false);
+  const [tab, setTab] = useState(0);
+
   return (
     <div className="w-11/12 lg:w-10/12 h-screen mx-auto mb-10 lg:mb-0 flex flex-col-reverse lg:flex lg:flex-row">
       <div className="lg:w-1/2 flex flex-col lg:justify-center">
@@ -22,11 +25,25 @@ const Intro = () => {
           aesthetically pleasing product.
         </p>
         <div className="flex" style={{ color: "#BFC6D9" }}>
-          <Link className="flex mr-8 lg:mb-0 lg:text-base text-sm items-center">
-            Learn more about me <LinkArrow />
-          </Link>
-          <Link className="flex lg:text-base text-sm items-center">
-            Check out my works <LinkArrow />
+          <Link
+            className="flex lg:text-base text-sm items-center hover:text-link"
+            onMouseEnter={() => {
+              setHov(!hov);
+              setTab(2);
+            }}
+            onMouseLeave={() => {
+              setHov(!hov);
+              setTab(0);
+            }}
+          >
+            Check out my works
+            <span
+              className={`transition-all duration-500 ${
+                hov && tab === 2 ? "translate-y-[-3px]" : ""
+              }`}
+            >
+              <LinkArrow colorr={hov ? "#D9B14E" : "#BFC6D9"} />
+            </span>
           </Link>
         </div>
       </div>

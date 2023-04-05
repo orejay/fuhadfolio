@@ -1,6 +1,7 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 
-const Logo = () => {
+const Logo = ({ clearActive }) => {
   return (
     <svg
       width="50"
@@ -8,6 +9,10 @@ const Logo = () => {
       viewBox="0 0 60 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={() => {
+        scroll.scrollToTop();
+        clearActive();
+      }}
     >
       <path
         d="M9.54135 32.5389H13.8499V39.6923H14.8442L23.6823 32.5389H28.8471L18.0756 41.5151L28.9299 50.4913H23.7652L14.8442 43.338H13.8499V50.4913H9.54135V32.5389ZM31.5233 32.5389H48.2052V36.2123H35.8319V40.217H47.5424V43.8904H35.8319V50.4913H31.5233V32.5389Z"
