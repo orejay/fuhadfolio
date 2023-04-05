@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import ope from "../assets/ope.png";
+import fuhadResume from "../assets/resume.pdf";
 import LinkArrow from "./LinkArrow";
 
 const Intro = () => {
   const [hov, setHov] = useState(false);
   const [tab, setTab] = useState(0);
+
+  const downloadFile = () => {
+    const blob = new Blob([fuhadResume], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "fuhadResume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="w-11/12 lg:w-10/12 h-screen mx-auto mb-10 lg:mb-0 flex flex-col-reverse lg:flex lg:flex-row">
@@ -42,12 +54,11 @@ const Intro = () => {
                 hov && tab === 1 ? "translate-y-[-3px]" : ""
               }`}
             >
-              <LinkArrow colorr={hov ? "#D9B14E" : "#BFC6D9"} />
+              <LinkArrow colorr={hov && tab === 1 ? "#D9B14E" : "#BFC6D9"} />
             </span>
           </a>
-          <a
-            href=""
-            className="flex lg:text-base text-sm items-center hover:text-link"
+          <p
+            className="flex lg:text-base text-sm items-center hover:text-link cursor-pointer"
             onMouseEnter={() => {
               setHov(!hov);
               setTab(2);
@@ -56,6 +67,7 @@ const Intro = () => {
               setHov(!hov);
               setTab(0);
             }}
+            onClick={() => downloadFile()}
           >
             View My Resume
             <span
@@ -63,9 +75,9 @@ const Intro = () => {
                 hov && tab === 2 ? "translate-y-[-3px]" : ""
               }`}
             >
-              <LinkArrow colorr={hov ? "#D9B14E" : "#BFC6D9"} />
+              <LinkArrow colorr={hov && tab === 2 ? "#D9B14E" : "#BFC6D9"} />
             </span>
-          </a>
+          </p>
         </div>
       </div>
       <div className="lg:w-1/2 flex justify-center lg:items-center mb-8">
