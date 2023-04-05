@@ -26,7 +26,7 @@ const Intro = () => {
         <div className="flex" style={{ color: "#BFC6D9" }}>
           <a
             href="https://www.behance.net/fuhadadegbenro"
-            className="flex lg:text-base text-sm items-center hover:text-link"
+            className="flex lg:text-base text-sm items-center hover:text-link mr-5"
             onMouseEnter={() => {
               setHov(!hov);
               setTab(1);
