@@ -10,7 +10,7 @@ const Plea = () => {
         I am always looking for new challenges and friends! Don’t air me. shoot
         me an email or reach out on social media. 😊
       </p>
-      <SocialMedia style={`mb-5`} />
+      <SocialMedia style={`mb-5 justify-center items-center`} />
       <hr />
     </div>
   );

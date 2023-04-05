@@ -36,7 +36,7 @@ const Header = () => {
           ></ion-icon>
         </div>
         <ul
-          className={`md:flex md:w-9/12 items-center justify-between absolute md:static bg-backgrnd md:z-auto z-[-1] left-0 w-full h-screen md:h-auto pb-7 md:pb-0 pl-7 md:pl-0 transition-all ease-in-out duration-500 ${
+          className={`md:flex md:w-9/12 items-center justify-between absolute md:static bg-backgrnd md:z-auto z-[-1] left-0 w-full text-xl h-screen md:h-auto pb-7 md:pb-0 pl-7 md:pl-0 transition-all ease-in-out duration-500 ${
             openNav ? "top-16" : "top-[-1490px]"
           }`}
         >
@@ -75,7 +75,9 @@ const Header = () => {
               </li>
             )
           )}
-          <SocialMedia />
+          <SocialMedia
+            style={`md:justify-center md:items-center justify-end mr-16 items-center`}
+          />
         </ul>
       </div>
     </div>

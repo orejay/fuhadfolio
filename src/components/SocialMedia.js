@@ -5,7 +5,7 @@ import Instagram from "./Instagram";
 
 const SocialMedia = ({ style }) => {
   return (
-    <div className={`flex justify-center ${style} items-center`}>
+    <div className={`flex ${style}`}>
       <a href="https://www.linkedin.com/in/fuhad-adegbenro/" target="_blank">
         <LinkedIn />
       </a>
