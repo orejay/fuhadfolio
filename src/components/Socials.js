@@ -21,7 +21,7 @@ const Socials = () => {
         <a
           key={index}
           href={each.link}
-          className="millik flex items-center px-8 mx-auto h-full underline text-tex hover:text-link"
+          className="millik flex items-center md:px-8 px-5 mx-auto h-full underline text-tex hover:text-link"
           onMouseEnter={() => {
             setHov(!hov);
             setTab(index + 1);
