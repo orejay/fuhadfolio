@@ -41,12 +41,9 @@ const projects = [
   },
 ];
 
-const style = {
-  color: "#BFC6D9",
-};
-
 const Projects = () => {
   const [hov, setHov] = useState(false);
+  const [readHov, setReadHov] = useState(false);
   const [tab, setTab] = useState(0);
 
   return (
@@ -73,14 +70,28 @@ const Projects = () => {
             <h1 className="millik text-xl lg:text-2xl mb-2 lg:mb-0 lg:w-7/12">
               {each.title}
             </h1>
-            <p className="lg:w-10/12 text-sm lg:text-base mb-4" style={style}>
+            <p className="lg:w-10/12 text-sm lg:text-base mb-4 text-tex">
               {each.desc}
             </p>
             <Link
-              className="flex items-center text-sm lg:text-base mb-10 lg:mb-0"
-              style={style}
+              className="flex w-3/12 py-2 justify-center transition-all duration-500 ease-in-out items-center text-sm lg:text-base mb-10 lg:mb-0 rounded-md bg-tex hover:bg-link text-drk"
+              onMouseEnter={() => {
+                setReadHov(true);
+              }}
+              onMouseLeave={() => {
+                setReadHov(false);
+              }}
             >
-              Read More <LinkArrow />
+              Read More{" "}
+              <span
+                className={`transition-all duration-500 ${
+                  readHov && tab === index + 1 ? "translate-y-[-5px]" : ""
+                }`}
+              >
+                <LinkArrow
+                  colorr={readHov && tab === index + 1 ? "#121212" : "#121212"}
+                />
+              </span>
             </Link>
           </div>
         ))}

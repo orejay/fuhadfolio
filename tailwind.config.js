@@ -7,6 +7,7 @@ module.exports = {
         link: "#D9B14E",
         tex: "#BFC6D9",
         pressed: "#D2a22d",
+        drk: "#121212",
       },
     },
   },

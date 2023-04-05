@@ -9,7 +9,13 @@ const Footer = () => {
         <Link to="/" className="w-1/12">
           <Logo />
         </Link>
-        <p>Fuhad148@gmail.com</p>
+        <a
+          href="mailto:fuhad148@gmail.com"
+          className="hover:text-link
+        "
+        >
+          Fuhad148@gmail.com
+        </a>
       </div>
     </div>
   );

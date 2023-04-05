@@ -13,8 +13,7 @@ const ContactMe = () => {
           Ready for us to make magic together? Lets talk!
         </h1>
         <a
-          className="rounded p-2 text-sm lg:text-base"
-          style={{ background: "#BFC6D9", color: "#222" }}
+          className="rounded p-2 text-sm lg:text-base transition-all duration-500 text-drk bg-tex hover:bg-link"
           href="mailto:fuhad148@gmail.com"
         >
           Send a Message

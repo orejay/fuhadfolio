@@ -65,7 +65,7 @@ const Header = () => {
               ) : (
                 <a
                   onClick={() => {
-                    scroller.scrollTo(each.link, { smooth: true });
+                    scroller.scrollTo(each.link, { smooth: true, offset: -64 });
                     setTabNo(index + 1);
                     setActive(false);
                   }}
