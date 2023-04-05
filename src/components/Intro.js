@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ope from "../assets/ope.png";
 import LinkArrow from "./LinkArrow";
-import { Link } from "react-router-dom";
 
 const Intro = () => {
   const [hov, setHov] = useState(false);
@@ -25,7 +24,29 @@ const Intro = () => {
           aesthetically pleasing product.
         </p>
         <div className="flex" style={{ color: "#BFC6D9" }}>
-          <Link
+          <a
+            href="https://www.behance.net/fuhadadegbenro"
+            className="flex lg:text-base text-sm items-center hover:text-link"
+            onMouseEnter={() => {
+              setHov(!hov);
+              setTab(1);
+            }}
+            onMouseLeave={() => {
+              setHov(!hov);
+              setTab(0);
+            }}
+          >
+            Check out my works
+            <span
+              className={`transition-all duration-500 ${
+                hov && tab === 1 ? "translate-y-[-3px]" : ""
+              }`}
+            >
+              <LinkArrow colorr={hov ? "#D9B14E" : "#BFC6D9"} />
+            </span>
+          </a>
+          <a
+            href=""
             className="flex lg:text-base text-sm items-center hover:text-link"
             onMouseEnter={() => {
               setHov(!hov);
@@ -36,7 +57,7 @@ const Intro = () => {
               setTab(0);
             }}
           >
-            Check out my works
+            View My Resume
             <span
               className={`transition-all duration-500 ${
                 hov && tab === 2 ? "translate-y-[-3px]" : ""
@@ -44,7 +65,7 @@ const Intro = () => {
             >
               <LinkArrow colorr={hov ? "#D9B14E" : "#BFC6D9"} />
             </span>
-          </Link>
+          </a>
         </div>
       </div>
       <div className="lg:w-1/2 flex justify-center lg:items-center mb-8">
