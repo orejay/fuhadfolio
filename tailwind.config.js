@@ -8,6 +8,7 @@ module.exports = {
         tex: "#BFC6D9",
         pressed: "#D2a22d",
         drk: "#121212",
+        backgrnd: "#171B26",
       },
     },
   },

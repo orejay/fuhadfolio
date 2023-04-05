@@ -21,14 +21,8 @@ const Header = () => {
   };
 
   return (
-    <div
-      className="w-full lg:flex lg:h-20 sticky top-0 h-16 justify-center items-center z-20"
-      style={{ background: "#171B26" }}
-    >
-      <div
-        className="w-11/12 lg:w-10/12 mx-auto py-5 px-3 flex items-center justify-between"
-        style={{ color: "#BFC6D9" }}
-      >
+    <div className="w-full lg:flex lg:h-20 sticky shadow-lg bg-backgrnd top-0 h-16 justify-center items-center z-20">
+      <div className="w-11/12 lg:w-10/12 mx-auto bg-backgrnd text-tex py-4 px-3 md:flex items-center justify-between">
         <Link to="/" className="w-1/12">
           <Logo clearActive={(props) => clearActive(props)} />
         </Link>
@@ -41,14 +35,14 @@ const Header = () => {
             name={!openNav ? "grid-outline" : "close-outline"}
           ></ion-icon>
         </div>
-        <div
-          className={`lg:flex ${
-            !openNav ? "hidden" : ""
-          } lg:w-9/12 justify-between`}
+        <ul
+          className={`md:flex md:w-9/12 items-center justify-between absolute md:static bg-backgrnd md:z-auto z-[-1] left-0 w-full h-screen md:h-auto pb-7 md:pb-0 pl-7 md:pl-0 transition-all ease-in-out duration-500 ${
+            openNav ? "top-16" : "top-[-1490px]"
+          }`}
         >
-          <div className="lg:flex lg:flex-row flex flex-col w-6/12 items-center justify-between">
-            {nav.map((each, index) =>
-              ["About Me", "UIs"].includes(each.name) ? (
+          {nav.map((each, index) =>
+            ["About Me", "UIs"].includes(each.name) ? (
+              <li className="md:my-0 my-5">
                 <Link
                   to={each.link}
                   key={index}
@@ -62,7 +56,9 @@ const Header = () => {
                 >
                   {each.name}
                 </Link>
-              ) : (
+              </li>
+            ) : (
+              <li className="md:my-0 my-5">
                 <a
                   onClick={() => {
                     scroller.scrollTo(each.link, { smooth: true, offset: -64 });
@@ -76,11 +72,11 @@ const Header = () => {
                 >
                   {each.name}
                 </a>
-              )
-            )}
-          </div>
+              </li>
+            )
+          )}
           <SocialMedia />
-        </div>
+        </ul>
       </div>
     </div>
   );
